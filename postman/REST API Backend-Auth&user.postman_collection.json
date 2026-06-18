@@ -70,6 +70,16 @@
             }
           ],
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
             "header": [],
             "url": {
@@ -232,11 +242,21 @@
         {
           "name": "logout",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "\r\n\r\n{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1234\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -244,12 +264,12 @@
               }
             },
             "url": {
-              "raw": "{{baseurl}}/login",
+              "raw": "{{baseurl}}/logout",
               "host": [
                 "{{baseurl}}"
               ],
               "path": [
-                "login"
+                "logout"
               ]
             }
           },
@@ -338,6 +358,10 @@
   "variable": [
     {
       "key": "baseurl",
+      "value": "http://localhost:5000/api"
+    },
+    {
+      "key": "accessToken",
       "value": ""
     }
   ]
