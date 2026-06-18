@@ -125,6 +125,41 @@ CREATE TABLE `user` (
 
 ---
 
+## 🧪 Postman Collection
+
+ไฟล์ทดสอบ API อยู่ที่ `postman/REST API Backend-Auth&user.postman_collection.json`
+
+### วิธี Import
+
+1. เปิด **Postman** → คลิก **Import**
+2. ลาก-วางไฟล์ `postman/*.json` หรือ Browse ไปที่ไฟล์
+3. ตั้งค่า **Environment Variable**:
+
+| Variable | Value |
+|---|---|
+| `baseurl` | `http://localhost:5000/api` |
+
+### Requests ที่มีใน Collection
+
+**📁 auth**
+| Request | Method | Endpoint |
+|---|---|---|
+| register | `POST` | `/api/register` |
+| login | `POST` | `/api/login` |
+| logout | `POST` | `/api/logout` |
+| refareshToken | `GET` | `/api/refareshToken` |
+
+**📁 users** *(ต้องใส่ Bearer Token)*
+| Request | Method | Endpoint |
+|---|---|---|
+| Get data | `GET` | `/api/users` |
+| Get data list | `GET` | `/api/users/:id` |
+| Post data | `POST` | `/api/users` |
+| put data | `PUT` | `/api/users/:id` |
+| delete | `DELETE` | `/api/users/:id` |
+
+---
+
 ## 📝 License
 
 ISC
