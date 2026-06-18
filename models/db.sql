@@ -58,5 +58,5 @@ ALTER TABLE `app-crud-node`.`user`
 CHANGE COLUMN `refresh_token` `refresh_token` TEXT NULL DEFAULT NULL ;
 
 ALTER TABLE `app-crud-node`.`user` 
-ADD COLUMN `is_admin` TINYINT(1) NULL DEFAULT '1' AFTER `enable`;
+ADD COLUMN `is_admin` TINYINT(1) NULL DEFAULT '0' AFTER `enable`;
 
