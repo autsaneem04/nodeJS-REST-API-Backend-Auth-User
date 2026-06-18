@@ -105,7 +105,7 @@ CREATE TABLE `user` (
   `name`          VARCHAR(45),
   `lname`         VARCHAR(45),
   `enable`        TINYINT(1) DEFAULT 1,
-  `is_admin`      TINYINT(1) DEFAULT 1,
+  `is_admin`      TINYINT(1) DEFAULT 0,
   `username`      VARCHAR(45),
   `password`      VARCHAR(255),
   `refresh_token` TEXT
