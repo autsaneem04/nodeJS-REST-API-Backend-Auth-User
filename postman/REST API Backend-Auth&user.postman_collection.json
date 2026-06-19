@@ -302,7 +302,7 @@
           "response": []
         },
         {
-          "name": "refareshToken",
+          "name": "refreshToken",
           "request": {
             "auth": {
               "type": "bearer",
@@ -317,12 +317,12 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseurl}}/refareshToken",
+              "raw": "{{baseurl}}/refreshToken",
               "host": [
                 "{{baseurl}}"
               ],
               "path": [
-                "refareshToken"
+                "refreshToken"
               ]
             }
           },
