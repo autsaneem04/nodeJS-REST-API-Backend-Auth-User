@@ -81,7 +81,7 @@ npm start
 | `POST` | `/api/register` | สมัครสมาชิก |
 | `POST` | `/api/login` | เข้าสู่ระบบ → ได้รับ Access + Refresh Token |
 | `POST` | `/api/logout` | ออกจากระบบ 🔒 |
-| `GET` | `/api/refareshToken` | ต่ออายุ Access Token |
+| `GET` | `/api/refreshToken` | ต่ออายุ Access Token |
 
 ### Users *(ต้องมีสิทธิ์ Admin)*
 
@@ -119,7 +119,7 @@ CREATE TABLE `user` (
 ```
 1. POST /api/login       → Access Token (20m) + Refresh Token (7d) via cookie
 2. ใช้ Access Token ใน Header: Authorization: Bearer <token>
-3. GET /api/refareshToken → ขอ Access Token ใหม่เมื่อหมดอายุ
+3. GET /api/refreshToken → ขอ Access Token ใหม่เมื่อหมดอายุ
 4. POST /api/logout       → ล้าง Refresh Token ออกจาก DB และ cookie
 ```
 
@@ -147,7 +147,7 @@ CREATE TABLE `user` (
 | register | `POST` | `/api/register` |
 | login | `POST` | `/api/login` |
 | logout | `POST` | `/api/logout` |
-| refareshToken | `GET` | `/api/refareshToken` |
+| refreshToken | `GET` | `/api/refreshToken` |
 
 **📁 users** *(ต้องใส่ Bearer Token)*
 | Request | Method | Endpoint |
